@@ -1,0 +1,49 @@
+/* For the page index.html */
+/* Top app bar */
+.mdc-top-app-bar .top-icon {
+    width: 50px;
+    margin-left: 10px;
+}
+.mdc-top-app-bar .mdc-top-app-bar__section .mdc-top-app-bar__title {
+    font-size: 25px;
+}
+.mdc-top-app-bar .mdc-top-app-bar__action-item {
+    height: 58px; width: 58px;
+    font-size: 28px;
+}
+
+/* For features showcase */
+.--text-centered {
+    text-align: center;
+}
+.feature-img {
+    width: 100%;
+}
+.extra-features-container {
+    padding: 0 10px;
+    background-color: var(--mdc-theme-primary);
+    transition: background-color 250ms ease-in-out;
+    border-radius: 5px;
+}
+.extra-features-container h2 {
+    padding-top: 5px;
+    margin-bottom: 10px;
+}
+.extra-features-container p {
+    padding-bottom: 5px;
+}
+.light .extra-features-container {
+    background-color: unset;
+}
+
+/* Footer */
+.footer {
+    padding: 1px 40px 20px 40px;
+    background-color: var(--mdc-theme-primary);
+    transition: background-color 200ms ease-in-out;
+}
+.bottom-divider { opacity: 0 }
+.light .bottom-divider { opacity: .4 }
+.light .footer {
+    background-color: unset;
+}

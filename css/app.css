@@ -1,0 +1,432 @@
+/*
+ * Just in case people come and look at this in the year 2050...
+ *
+ * Written by Vincent Kwok (CryptoAlgo) in 2020
+ * (c) 2020-2020
+ *
+ * Chatty is distributed under the terms of the GNU General Public License Version 3.
+ *
+ *   This program is free software: you can redistribute it and/or modify
+ *   it under the terms of the GNU General Public License as published by
+ *   the Free Software Foundation, either version 3 of the License, or
+ *   any later version.
+ *
+ *   This program is distributed in the hope that it will be useful,
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *   GNU General Public License for more details.
+ *
+ *   You should have received a copy of the GNU General Public License
+ *   along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ *
+ * CryptoAlgo Inc., hereby disclaims all copyright interest in the program “Chatty”
+ * (which allows secure online communication between 2 or more people) written by Vincent Kwok.
+ *
+ * Vincent Kwok, 26 September 2020
+ * Owner of CryptoAlgo
+ */
+
+/* App theme colors */
+/* Light mode */
+body.light {
+    --message-textbox-bg: #EEE;
+    --message-textbox-textarea-bg: #EFEFEF;
+    --user-msg-bg: #DCF8C6;
+    --remote-msg-bg: #FFF;
+    --progbar-line-bg: #00a2ed;
+    --dull-button-bg: #555;
+    --req-grp-invite-bg: rgba(180, 180, 180, .6);
+    --msg-area-bg: #E5DDD5;
+    --msg-bg-inversion: 0%;
+}
+/* Dark mode */
+:root {
+    --message-textbox-bg: #212121;
+    --message-textbox-textarea-bg: #333;
+    --msg-textbox-label: rgba(255, 255, 255, .6);
+    --user-msg-bg: #054740;
+    --remote-msg-bg: #262D31;
+    --progbar-line-bg: #0078D7;
+    --dull-button-bg: #333;
+    --req-grp-invite-bg: rgba(50, 50, 50, .8);
+    --msg-area-bg: #0D1418;
+    --msg-area-bg-opacity: 25%;
+    --msg-bg-inversion: 100%;
+}
+
+/* App bar */
+.mdc-top-app-bar {
+    -webkit-app-region: drag;
+}
+.mdc-top-app-bar__navigation-icon, .mdc-top-app-bar__action-item {
+    -webkit-app-region: no-drag;
+}
+#window-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 46px);
+    height: 100%;
+    -webkit-app-region: no-drag;
+}
+/* Buttons */
+.mdc-top-app-bar .mdc-top-app-bar__section.mdc-top-app-bar__section--align-end {
+    padding-right: 0;
+}
+#window-buttons .window-act-button {
+    grid-row: 1 / span 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    user-select: none;
+}
+#window-buttons .window-act-button:hover {
+    background-color: rgba(255, 255, 255, .1);
+}
+#window-buttons #close-button:hover {
+    background: #E81123;
+}
+#window-buttons #close-button:active {
+    background: #F1707A;
+}
+
+/* Login overlay */
+.login-overlay {
+    width: 100%;
+    height: calc(100% - 46px);
+    position: fixed;
+    z-index: 7;
+    left: 0; top: 46px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--mdc-theme-surface);
+    opacity: 1;
+    transition: opacity 200ms ease-out;
+}
+.login-overlay .login-holder {
+    padding: 20px;
+    border-color: rgba(256, 256, 256, .2);
+    border-radius: 7px;
+    border-style: solid;
+    margin: 0 10px;
+    max-height: calc(100% - 66px);
+    overflow: auto;
+}
+.login-overlay .login-holder label.mdc-text-field {
+    width: 100%;
+}
+.login-overlay .login-holder .mdc-button--raised {
+    margin-left: auto;
+    margin-top: 10px;
+    position: relative;
+    right: 0px;
+}
+.login-overlay .login-holder button:not(.mdc-button) {
+    background-color: #00000000;
+    color: var(--content-text-color);
+    border: none; outline: none;
+    padding: 0; margin-left: 5px;
+}
+
+/* Styles for message box */
+.message-box {
+    background-color: var(--mdc-theme-primary);
+    position: fixed;
+    bottom: 0; left: 0;
+    width: 100%;
+    padding: 5px 0;
+    transition: background-color 250ms ease-in-out;
+    border-radius: 28px 28px 0 0;
+}
+.message-box .mdc-text-field {
+    width: calc(100% - 69px);
+    border-radius: 56px;
+    margin-left: 5px;
+    background-color: var(--message-textbox-textarea-bg, #FFF);
+    transition: background-color 250ms ease-in-out;
+    min-height: 56px;
+    height: auto;
+}
+.mdc-text-field:not(.mdc-text-field--disabled) .mdc-floating-label {
+    color: var(--msg-textbox-label, #EEE);
+}
+.light .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {
+    color: rgba(98, 0, 238, .87) !important;
+}
+.light .mdc-text-field:not(.mdc-text-field--disabled) .mdc-floating-label {
+    color: rgba(0, 0, 0, .6);
+}
+.mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input {
+    color: var(--header-text-color, #FFF);
+    caret-color: var(--content-text-color, #DDD);
+}
+.message-box .mdc-line-ripple {
+    display: none;
+}
+.message-box .mdc-fab { /* Send button */
+    margin-right: 3px;
+}
+
+
+/* Messages */
+.messages-area {
+    height: 100%;
+    width: calc(100% - 10px);
+    overflow: auto;
+    padding: 0 5px;
+    max-height: 100%;
+    max-width: calc(100% - 10px);
+}
+.messages-area-holder {
+    padding: 48px 0 66px 0;
+    height: calc(100vh - 114px);
+    max-height: calc(100vh - 114px);
+}
+.messages-area::after {
+    content: "";
+    background-image: url("../img/chat-bg.png");
+    background-repeat: repeat;
+    background-attachment: fixed;
+    width: 100vw;
+    height: inherit;
+    top: 0; left: 0; bottom: 0; right: 0;
+    position: fixed;
+    z-index: -1;
+    opacity: 7%;
+    filter: invert(var(--msg-bg-inversion, 0%));
+}
+.messages-area::before {
+    content: "";
+    background-color: var(--msg-area-bg);
+    width: 100vw;
+    height: inherit;
+    top: 0; left: 0; bottom: 0; right: 0;
+    position: fixed;
+    z-index: -2;
+    transition: background-color 150ms ease-in-out;
+}
+.messages-area p {
+    word-break: break-all;
+    transition: color 250ms ease-in-out;
+    margin: 1px;
+}
+.messages-area div:last-child.from-remote, .messages-area div:last-child.from-user {
+    margin-bottom: 20px;
+}
+.messages-area div:first-child.from-remote, .messages-area div:first-child.from-user {
+    margin-top: 10px;
+}
+
+/* Messages from user */
+.messages-area .from-user {
+    background-color: var(--user-msg-bg);
+    border-radius: 7px 7px 0 7px;
+    margin: 3px 10px 3px auto;
+}
+/* Messages from others */
+.messages-area .from-remote {
+    background-color: var(--remote-msg-bg);
+    border-radius: 7px 7px 7px 0;
+    margin: 3px auto 3px 10px;
+}
+/* All messages */
+.messages-area .from-remote, .messages-area .from-user {
+    position: relative;
+    padding: 5px 8px;
+    transition: background-color 200ms ease-in-out;
+}
+
+/* Add/Join Group dialog */
+.hidden {
+    display: none;
+}
+.mdc-text-field {
+    background-color: var(--message-textbox-textarea-bg, #FFF) !important;
+}
+.mdc-dialog .mdc-dialog__surface {
+    background-color: var(--message-textbox-bg, #000);
+}
+
+/* "Un-styled" a */
+.a-no-style {
+    color: inherit;
+    text-decoration: none;
+}
+.a-no-style:hover {
+    text-decoration: underline;
+}
+
+/* Group invite code */
+.grpInviteCode {
+    display: table;
+    margin: 0 auto;
+    border-width: 2px;
+    border-radius: 7px;
+    border-style: solid;
+    padding: 5px 8px;
+    border-color: var(--progbar-line-bg, white);
+}
+
+/* Overlaid progress bar */
+.overlay-progressbar {
+    position: fixed;
+    z-index: 3;
+    top: 48px;
+    background-color: #333;
+    border-radius: 4px;
+    opacity: .7;
+}
+.overlay-progressbar .mdc-linear-progress__bar-inner {
+    border-color: var(--progbar-line-bg, #0078D7) !important;
+}
+
+/* Requests to join group */
+.join-grp-request {
+    background-color: var(--req-grp-invite-bg, rgba(50, 50, 50, .8));
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 6px;
+}
+.join-grp-request p {
+    display: table;
+    text-align: center;
+    margin: 0 auto !important;
+}
+.action-holder {
+    display: table;
+    margin: 5px auto 0 auto;
+}
+.action-holder .dull-button{
+    margin-left: 8px;
+}
+@media only screen and (max-width: 345px) {
+    .action-holder .dull-button{
+        margin-top: 8px;
+    }
+}
+
+/* Buttons */
+.mdc-button--raised.dull-button {
+    background-color: var(--dull-button-bg, #000);
+}
+
+/* Add first group */
+.add-first-grp .mdc-layout-grid__cell {
+    background-color: var(--mdc-theme-primary);
+    border-radius: 7px;
+}
+.light .add-first-grp .mdc-layout-grid__cell {
+    background-color: #FFF;
+}
+.add-first-grp h2 {
+    text-align: center;
+}
+.add-first-grp .material-icons {
+    text-align: center;
+    width: 100%;
+}
+
+/* Menu Bar */
+/* Drawer light/dark mode */
+.mdc-drawer .mdc-list-item__text, .mdc-drawer .mdc-list-item__graphic {
+    color: var(--header-text-color, #FFF);
+}
+.mdc-drawer .mdc-drawer__subtitle {
+    color: var(--content-text-color, #FFF);
+}
+.mdc-drawer .mdc-drawer__title {
+    color: var(--header-text-color, #FFF);
+}
+aside#drawer {
+    border-radius: 0 10px 10px 0;
+    background-color: var(--mdc-theme-surface, #000);
+}
+.mdc-drawer .mdc-list-item--activated .mdc-list-item__graphic {
+    color: #0288D1;
+}
+
+/* Popup YouTube Player */
+#popup-YT {
+    width: 400px;
+    max-width: 90%;
+    height: 252px;
+    position: fixed;
+    z-index: 10;
+    border-radius: 7px;
+    display: none;
+    top: 20px;
+    left: 20px;
+    -webkit-app-region: no-drag;
+    resize: both;
+    overflow: auto;
+    min-height: 252px;
+    min-width: 400px;
+}
+#popup-YT iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 0 0 7px 7px;
+}
+/* Draggable handle */
+#popup-YT #popup-drag {
+    cursor: move;
+    height: 20px;
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+    background-color: rgba(0, 0, 0, .5)
+}
+#popup-YT #popup-drag .close-btn {
+    font-size: 12px;
+    margin: 3px 0 0 5px;
+    border-radius: 20px;
+    border: none;
+    background-color: #FF605C;
+    color: rgba(0, 0, 0, .5);
+    padding: 1px;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Chrome etc */
+}
+#popup-YT #popup-drag .close-btn:hover {
+    background-color: #E81123;
+}
+#popup-YT #popup-drag .close-btn:active {
+    background-color: #F1707A;
+}
+
+/* FAB button */
+.play-popup-btn {
+    position: absolute;
+    top: 50px;
+    right: 15px;
+    display: flex;
+    opacity: 0;
+    transition: opacity 100ms ease-in;
+}
+.play-popup-btn:hover {
+    opacity: 100;
+}
+
+/* Inline YouTube player */
+.inlineYTPlayer {
+    width: 100%;
+    border-radius: 7px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+}
+.iframe-holder {
+    padding-top: 56.25%;
+    position: relative;
+    margin: 0;
+    min-width: 300px;
+    max-width: calc(100vw - 20px);
+}

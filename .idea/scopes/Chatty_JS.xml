@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="Chatty-JS" pattern="file[Chatty]:*/&amp;&amp;!file[Chatty]:css//*&amp;&amp;!file[Chatty]:release-builds//*&amp;&amp;!file[Chatty]:build-packages//*&amp;&amp;!file[Chatty]:win64//*&amp;&amp;!file[Chatty]:packages//*&amp;&amp;!file[Chatty]:img//*&amp;&amp;!file[Chatty]:fonts//*&amp;&amp;!file[Chatty]:.firebase//*&amp;&amp;!file[Chatty]:.idea//*" />
+</component>

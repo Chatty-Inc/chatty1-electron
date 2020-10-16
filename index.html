@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="img/icon.png"/>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <title>Chatty</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Chatty: End-to-end AES encrypted communication, intuitive sleek UI and quick setup">
+
+    <!-- MDC Script and CSS -->
+    <link href="css/material-components.css" rel="stylesheet">
+    <script src="js/material-components.js"></script>
+
+    <!-- Helper JavaScript-->
+    <script defer src="js/main.min.js" type="text/javascript"></script>
+    <script defer src="js/common.min.js" type="text/javascript"></script>
+    <script defer src="js/ua-parser.min.js" type="text/javascript"></script> <!-- Device type detection -->
+
+    <!-- Helper CSS -->
+    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="css/index.min.css">
+
+    <!-- Preload requests -->
+    <link rel="preload" href="fonts/product_sans.ttf" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/AndroidEuclid-Medium-WebS.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/material-icons.woff2" as="font" crossorigin="anonymous">
+</head>
+
+<body class="mdc-typography" ondragstart="return false">
+<!-- Giant Chatty Logo -->
+<div class="mdc-dialog" data-mdc-auto-init="MDCDialog" id="big-icon">
+    <div class="mdc-dialog__container">
+        <div class="mdc-dialog__surface"
+             role="alertdialog"
+             aria-modal="true"
+             aria-labelledby="logo-title"
+             aria-describedby="logo-content">
+            <div class="mdc-dialog__title" id="logo-title">
+                Chatty Icon
+            </div>
+            <div class="mdc-dialog__content" id="logo-content">
+                <img src="img/icon.svg" alt="Big Chatty Icon" style="margin:auto;width:85%;display:flex">
+            </div>
+            <div class="mdc-dialog__actions">
+                <button type="button" class="mdc-button mdc-dialog__button" data-mdc-dialog-action="cancel">
+                    <div class="mdc-button__ripple"></div>
+                    <span class="mdc-button__label">Close</span>
+                </button>
+                <button type="button" class="mdc-button mdc-dialog__button" data-mdc-dialog-action="accept"
+                onclick="window.location.href='img/icon.svg'">
+                    <div class="mdc-button__ripple"></div>
+                    <span class="mdc-button__label">Download</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="mdc-dialog__scrim"></div>
+</div>
+<!-- End Chatty Logo dialog box -->
+
+<header class="mdc-top-app-bar mdc-top-app-bar--fixed" data-mdc-auto-init="MDCTopAppBar">
+    <div class="mdc-top-app-bar__row">
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+            <img src="img/icon.svg" class="top-icon" alt="Chatty Icon"/>
+            <span class="mdc-top-app-bar__title">Chatty</span>
+        </section>
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
+            <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Documentation" title="About">article</button>
+            <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" onclick="window.location.href='#downloads'"
+                    aria-label="Search" title="Download Chatty">get_app</button>
+        </section>
+    </div>
+</header>
+<div class="mdc-top-app-bar--fixed-adjust">
+    <div class="mdc-layout-grid">
+        <div class="mdc-layout-grid__inner">
+            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3">
+                <h1 class="mdc-typography--headline1">Chatty</h1>
+                <p>A open-source, end-to-end encrypted chatting app built on Electron</p>
+                <button class="mdc-button--raised mdc-button colorful-button" style="margin-bottom:10px;width:100%" onclick="window.location.href='#downloads'" data-mdc-auto-init="MDCRipple">
+                    <div class="mdc-button__ripple"></div>
+                    <span class="mdc-button__label">Download Chatty now</span>
+                    <div class="mdc-button__touch"></div>
+                </button>
+                <button class="mdc-button--raised mdc-button" style="width:100%;margin-bottom:10px" onclick="window.location.href='app.html'" data-mdc-auto-init="MDCRipple">
+                    <div class="mdc-button__ripple"></div>
+                    <span class="mdc-button__label">Use Chatty in your browser</span>
+                    <div class="mdc-button__touch"></div>
+                </button>
+
+                <button class="mdc-button" style="width:100%" data-mdc-auto-init="MDCRipple"
+                        onclick="new mdc.dialog.MDCDialog(document.getElementById('big-icon')).open()">
+                    <div class="mdc-button__ripple"></div>
+                    <span class="mdc-button__label">View Chatty Icon (For Grading)</span>
+                    <div class="mdc-button__touch"></div>
+                </button>
+            </div>
+            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-5 mdc-layout-grid__cell--span-9-desktop">
+                <picture>
+                    <source srcset="img/chattyScreenshot.webp" class="mdc-elevation--z18 feature-img" type="image/webp">
+                    <source srcset="img/chattyScreenshot.png" class="mdc-elevation--z18 feature-img" type="image/jpeg">
+                    <img src="img/chattyScreenshot.png" class="mdc-elevation--z18 feature-img" alt="Screenshot of Chatty">
+                </picture>
+            </div>
+        </div>
+    </div>
+
+    <div class="--text-centered">
+        <h2>Secure Communication. No compromises.</h2>
+        <p>Nobody, not even us, can read your messages</p>
+
+        <div class="mdc-layout-grid">
+            <div class="mdc-layout-grid__inner">
+                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-5-desktop"><h5 class="mdc-typography--headline5">
+                    <i class="material-icons">no_encryption</i>
+                    Hello
+                </h5></div>
+                <div class="mdc-layout-grid__cell mobile-hidden mdc-layout-grid__cell--span-2-desktop">
+                    <h5 class="mdc-typography--headline5">
+                    <i class="material-icons">arrow_forward</i>
+                </h5></div>
+                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-5-desktop"><h5 class="mdc-typography--headline5">
+                    <i class="material-icons">enhanced_encryption</i>
+                    8IpfYhiVg6YeKNWthUPJlA==
+                </h5></div>
+            </div>
+        </div>
+        <hr class="hero-feature-divider"/>
+
+        <h2 class="mdc-typography--headline2">Features</h2>
+    </div>
+
+    <div class="mdc-layout-grid">
+        <div class="mdc-layout-grid__inner">
+            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3-tablet">
+                <h2>Quickly create groups and start chatting with friends immediately!</h2>
+                <p>Get started with no friction. No exchange of keys, no messy tokens. Just create a group, and share a unique 6-digit invite code. That's it!</p>
+                <picture>
+                    <source srcset="img/get_invite_code.webp" class="mdc-elevation--z4 feature-img" type="image/webp">
+                    <source srcset="img/get_invite_code.png" class="mdc-elevation--z4 feature-img" type="image/jpeg">
+                    <img src="img/get_invite_code.png" class="mdc-elevation--z4 feature-img" alt="Screenshot of invite code menu in Chatty">
+                </picture>
+            </div>
+            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8-desktop mdc-layout-grid__cell--span-5-tablet">
+                <picture>
+                    <source srcset="img/chatty_creategrp.webp" class="mdc-elevation--z6 feature-img" type="image/webp">
+                    <source srcset="img/chatty_creategrp.png" class="mdc-elevation--z6 feature-img" type="image/jpeg">
+                    <img src="img/chatty_creategrp.png" class="mdc-elevation--z6 feature-img" alt="Screenshot of Chatty group creation">
+                </picture>
+            </div>
+        </div>
+    </div>
+    <div class="mdc-layout-grid">
+        <div class="mdc-layout-grid__inner">
+            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8-desktop  mdc-layout-grid__cell--span-5-tablet">
+                <picture>
+                    <source srcset="img/uishowcase.webp" class="feature-img mdc-elevation--z6" type="image/webp">
+                    <source srcset="img/uishowcase.png" class="feature-img mdc-elevation--z6" type="image/jpeg">
+                    <img src="img/uishowcase.png" class="feature-img mdc-elevation--z6" alt="Screenshot of Chatty's clean and intuitive user interface">
+                </picture>
+            </div>
+            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3-tablet">
+                <h2>Simple and intuitive user interface</h2>
+                <p>Simple to use, good looking and clean user interface.
+                    With familiar and helpful features such as an in-built YouTube player for links and autocorrect,
+                    you'll surely feel at home with Chatty!</p>
+                <picture>
+                    <source srcset="img/spellchecker.webp" class="mdc-elevation--z4 feature-img" type="image/webp">
+                    <source srcset="img/spellchecker.png" class="mdc-elevation--z4 feature-img" type="image/jpeg">
+                    <img src="img/spellchecker.png" class="mdc-elevation--z4 feature-img" alt="Message spellchecker in action">
+                </picture>
+            </div>
+        </div>
+    </div>
+
+    <h1 class="--text-centered" style="margin-bottom:0">Light or Dark Theme? Your Choice</h1>
+    <div class="mdc-layout-grid">
+        <div class="mdc-layout-grid__inner">
+            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-4-tablet
+             mdc-layout-grid__cell--span-6-phone">
+                <h2>Light Theme</h2>
+                <img alt="A screenshot of Chatty desktop in light theme" class="mdc-elevation--z4" src="img/uiLight.webp" style="width:100%">
+                <p>Bright people would love this theme (no pun intended)</p>
+            </div>
+            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-4-tablet
+             mdc-layout-grid__cell--span-6-phone">
+                <h2>Dark Theme</h2>
+                <img alt="A screenshot of Chatty desktop in dark theme" class="mdc-elevation--z4" src="img/uiDark.webp" style="width:100%">
+                <p>Great for texting in the dark and at night!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mdc-touch-target-wrapper theme-toggle-button">
+    <button class="mdc-fab mdc-fab--extended" id="themeBtn" data-mdc-auto-init="MDCRipple" onclick="toggleTheme()">
+        <div class="mdc-fab__ripple"></div>
+        <span class="material-icons mdc-fab__icon">brightness_medium</span>
+        <span class="mdc-fab__label">View in dark theme</span>
+        <div class="mdc-fab__touch"></div>
+    </button>
+</div>
+
+<hr class="hero-feature-divider"/>
+
+<h1 class="mdc-typography--headline1 --text-centered" style="margin-bottom:0">There's more!</h1>
+<div class="mdc-layout-grid" style="padding-top:0">
+    <div class="mdc-layout-grid__inner">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop">
+            <div class="mdc-elevation--z8 extra-features-container">
+                <h2>Update Checker</h2>
+                <p>Checks if you're up to date with the latest security and bugfixes</p>
+            </div>
+        </div>
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop">
+            <div class="mdc-elevation--z8 extra-features-container">
+                <h2>Bot Protection</h2>
+                <p>Spam and bot detection algorithms prevent bots from sending spam</p>
+            </div>
+        </div>
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop">
+            <div class="mdc-elevation--z8 extra-features-container">
+                <h2>Military-Grade Encryption</h2>
+                <p>End to end AES encryption of messages</p>
+            </div>
+        </div>
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop">
+            <div class="mdc-elevation--z8 extra-features-container">
+                <h2>Fast & Efficient</h2>
+                <p>GPU-rendered graphics and efficient code for speedy execution</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr class="hero-feature-divider" id="downloads"/>
+
+<div class="mdc-layout-grid">
+    <div class="mdc-layout-grid__inner">
+        <div class="mdc-layout-grid__cell">
+            <h2>Download Chatty Now!</h2>
+            <p>Download now to begin your secure chatting experience!</p>
+            <div class="mdc-elevation--z8 extra-features-container children-centered" style="height:50%;padding:0">
+                <button class="mdc-button mdc-button--raised colorful-button" style="margin:10px"
+                        onclick="window.location.href='release-builds/installer.exe'">
+                    <div class="mdc-button__ripple"></div>
+                    <i class="material-icons mdc-button__icon" aria-hidden="true">get_app</i>
+                    <span class="mdc-button__label">Windows Installer (exe)</span>
+                </button>
+            </div>
+            <p>Current Version: 0.6.8</p>
+            <p>Chatty is currently in beta, and features might be unstable.</p>
+        </div>
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8-desktop">
+            <h2>Operating System Support</h2>
+            <div class="mdc-data-table" style="width: 100%">
+                <div class="mdc-data-table__table-container">
+                    <table class="mdc-data-table__table" aria-label="Operating System Compatibility">
+                        <thead>
+                        <tr class="mdc-data-table__header-row">
+                            <th class="mdc-data-table__header-cell" role="columnheader" scope="col">Operating System</th>
+                            <th class="mdc-data-table__header-cell" role="columnheader" scope="col">Current Support</th>
+                        </tr>
+                        </thead>
+                        <tbody class="mdc-data-table__content">
+                        <tr class="mdc-data-table__row">
+                            <th class="mdc-data-table__cell" scope="row">Windows 10</th>
+                            <td class="mdc-data-table__cell">Full Support (Desktop, Web)</td>
+                        </tr>
+                        <tr class="mdc-data-table__row">
+                            <th class="mdc-data-table__cell" scope="row">Android (>= Ice Cream Sandwich)</th>
+                            <td class="mdc-data-table__cell">Planned</td>
+                        </tr>
+                        <tr class="mdc-data-table__row">
+                            <th class="mdc-data-table__cell" scope="row">Linux (Ubuntu/Debian)</th>
+                            <td class="mdc-data-table__cell">Web Version</td>
+                        </tr>
+                        <tr class="mdc-data-table__row">
+                            <th class="mdc-data-table__cell" scope="row">Apple (Any)</th>
+                            <td class="mdc-data-table__cell">Web Version</td>
+                        </tr>
+                        <tr class="mdc-data-table__row">
+                            <th class="mdc-data-table__cell" scope="row">Below Windows XP</th>
+                            <td class="mdc-data-table__cell">Not Planned</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr class="hero-feature-divider bottom-divider" style="margin-top:10px"/>
+
+<div class="footer">
+    <h1>Chatty</h1>
+    <p style="font-weight:400">
+        Made by Vincent Kwok, owner of CryptoAlgo
+    </p>
+    <button class="mdc-button" data-mdc-auto-init="MDCRipple" onclick="document.location.href='mailto:support@cryptoalgo.cf'">
+        <div class="mdc-button__ripple"></div>
+        <i class="material-icons mdc-button__icon" aria-hidden="true">email</i>
+        <span class="mdc-button__label">Support</span>
+    </button>
+    <button class="mdc-button" data-mdc-auto-init="MDCRipple" onclick="document.location.href='https://cryptoalgo.cf'">
+        <div class="mdc-button__ripple"></div>
+        <i class="material-icons mdc-button__icon" aria-hidden="true">business</i>
+        <span class="mdc-button__label">CryptoAlgo Inc.</span>
+    </button>
+</div>
+
+<script type="text/javascript">
+    window.mdc.autoInit();
+</script>
+</body>
+</html>

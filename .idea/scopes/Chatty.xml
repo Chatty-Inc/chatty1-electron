@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="Chatty" pattern="file[Chatty]:css//*&amp;&amp;!file[Chatty]:build-packages//*&amp;&amp;!file[Chatty]:release-builds//*&amp;&amp;!file[Chatty]:win64//*" />
+</component>

@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2dbecda2-fb7e-4f13-b440-03804d0d86a0" name="Default Changelist" comment="Modified GitIgnore">
+      <change afterPath="$PROJECT_DIR$/.firebaserc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Generated_files.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/scopes/Chatty.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/scopes/Chatty_JS.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/app.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/app.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/index.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/main.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/material-components.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firebase.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fonts/AndroidEuclid-Bold-WebS.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fonts/AndroidEuclid-Bold-WebS.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fonts/AndroidEuclid-Medium-WebS.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fonts/AndroidEuclid-Medium-WebS.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fonts/material-icons.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fonts/product_sans.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/chat-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/chattyScreenshot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/chattyScreenshot.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/chatty_creategrp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/chatty_creategrp.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/get_invite_code.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/get_invite_code.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/icon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/icon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/spellchecker.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/spellchecker.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/uiDark.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/uiDark.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/uiLight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/uiLight.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/uishowcase.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/uishowcase.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/aes-js.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/app.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/bcrypt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/bcrypt.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/common.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/common.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/crypto-js.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/crypto-js.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/firebase-app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/firebase-app.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/firebase-database.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/firebase-database.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/jsencrypt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/main.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/material-components.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/secure-random.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/secure-random.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/sha1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/ua-parser.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/ua-parser.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/winButtons.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/winButtons.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/loader.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Chatty.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Chatty.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/win64/chatty-win32-x64/resources/app/.idea/Chatty.iml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="package.json" />
+        <option value="CSS File" />
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="CryptoAlgo Inc &lt;support@cryptoalgo.cf&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="NamedScopeManager">
+    <order>
+      <scope name="Chatty" />
+      <scope name="Chatty-JS" />
+    </order>
+  </component>
+  <component name="ProjectId" id="1i2ais5aNpB3NyPwIzZibTxRqsL" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="NewWatcherDialog.advanced.open" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="javascript.nodejs.core.library.configured.version" value="10.1.3" />
+    <property name="javascript.nodejs.core.library.typings.version" value="10.1.3" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="watcher.settings" />
+    <property name="settings.editor.splitter.proportion" value="0.20446429" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Vincent Kwok\WebstormProjects\Chatty\img" />
+      <recent name="C:\Users\Vincent Kwok\WebstormProjects\Chatty\fonts" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Vincent Kwok\WebstormProjects\Chatty\img" />
+      <recent name="C:\Users\Vincent Kwok\WebstormProjects\Chatty\font" />
+      <recent name="C:\Users\Vincent Kwok\WebstormProjects\Chatty" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Node.js.Electron">
+    <configuration name="Firefox Debug" type="FirefoxRemoteDebugType">
+      <method v="2">
+        <option name="FwBeforeLaunchTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Chatty Hot Reload" type="JavascriptDebugType" engineId="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" uri="http://localhost:63342/Chatty/index.html" useBuiltInWebServerPort="true">
+      <method v="2">
+        <option name="FwBeforeLaunchTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Electron" type="NodeJSConfigurationType" path-to-node="$USER_HOME$/AppData/Roaming/npm/electron.cmd" node-parameters="." path-to-js-file="main.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" path-to-node="$USER_HOME$/AppData/Roaming/npm/electron" node-parameters=".">
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Firefox Remote.Firefox Debug" />
+      <item itemvalue="JavaScript Debug.Chatty Hot Reload" />
+      <item itemvalue="Node.js.Electron" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2dbecda2-fb7e-4f13-b440-03804d0d86a0" name="Default Changelist" comment="" />
+      <created>1601108270808</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1601108270808</updated>
+      <workItem from="1601108274741" duration="34446000" />
+      <workItem from="1601560579526" duration="42798000" />
+      <workItem from="1601799825175" duration="18162000" />
+      <workItem from="1601896948705" duration="47843000" />
+      <workItem from="1602242272932" duration="14098000" />
+      <workItem from="1602288114340" duration="39936000" />
+      <workItem from="1602460821871" duration="48110000" />
+      <workItem from="1602718920125" duration="83000" />
+      <workItem from="1602723792850" duration="673000" />
+      <workItem from="1602729329157" duration="5668000" />
+      <workItem from="1602759669534" duration="2927000" />
+    </task>
+    <task id="LOCAL-00001" summary="Initial commit">
+      <created>1602242953391</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1602242953391</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Initial commit">
+      <created>1602243114573</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1602243114573</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Converted images to webP and compressed them">
+      <created>1602252427947</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1602252427947</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Version bump: 0.6.8 --&gt; 0.7.0&#10;-&gt; Custom title bar for electron app&#10;-&gt; UI optimisations&#10;-&gt; Website optimisations">
+      <created>1602586349353</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1602586349353</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Added BCrypt">
+      <created>1602591677687</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1602591677687</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Added groupData (AES key) encryption feature with a user-provided password&#10;&#10;-&gt; Fixed issues that caused the first message sent in a new group to disappear&#10;-&gt; Fixed an issue that made decryption of group data fail&#10;-&gt; Fixed an issue that caused group creation on first launch to fail&#10;-&gt; Compressed all JS and CSS&#10;-&gt; Updated the function that adds messages to prevent scrolling animation issues&#10;-&gt; UX improved&#10;-&gt; Firefox compatibility checked and issues fixed">
+      <created>1602731860603</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1602731860603</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Added groupData (AES key) encryption feature with a user-provided password&#10;&#10;-&gt; Fixed issues that caused the first message sent in a new group to disappear&#10;-&gt; Fixed an issue that made decryption of group data fail&#10;-&gt; Fixed an issue that caused group creation on first launch to fail&#10;-&gt; Compressed all JS and CSS&#10;-&gt; Updated the function that adds messages to prevent scrolling animation issues&#10;-&gt; UX improved&#10;-&gt; Firefox compatibility checked and issues fixed">
+      <created>1602733997371</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1602733997371</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Modified GitIgnore">
+      <created>1602734012478</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1602734012478</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Initial commit" />
+    <MESSAGE value="Converted images to webP and compressed them" />
+    <MESSAGE value="Version bump: 0.6.8 --&gt; 0.7.0&#10;-&gt; Custom title bar for electron app&#10;-&gt; UI optimisations&#10;-&gt; Website optimisations" />
+    <MESSAGE value="Added BCrypt" />
+    <MESSAGE value="Added groupData (AES key) encryption feature with a user-provided password&#10;&#10;-&gt; Fixed issues that caused the first message sent in a new group to disappear&#10;-&gt; Fixed an issue that made decryption of group data fail&#10;-&gt; Fixed an issue that caused group creation on first launch to fail&#10;-&gt; Compressed all JS and CSS&#10;-&gt; Updated the function that adds messages to prevent scrolling animation issues&#10;-&gt; UX improved&#10;-&gt; Firefox compatibility checked and issues fixed" />
+    <MESSAGE value="Modified GitIgnore" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modified GitIgnore" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="449" y="0" width="680" height="720" key="#HTML" timestamp="1601289791823">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="449" y="0" width="680" height="720" key="#HTML/0.0.1280.720@0.0.1280.720" timestamp="1601289791823" />
+    <state x="115" y="0" width="1089" height="720" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602723874824">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="96" y="0" width="1089" height="720" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.720@0.0.1280.720" timestamp="1602252786701" />
+    <state x="115" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.864@0.0.1536.864" timestamp="1602723874824" />
+    <state x="342" y="164" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1601290618807">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="342" y="164" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.720@0.0.1280.720" timestamp="1601290618807" />
+    <state x="445" y="130" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1602309925009">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="371" y="108" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.720@0.0.1280.720" timestamp="1602051645940" />
+    <state x="445" y="130" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.864@0.0.1536.864" timestamp="1602309925009" />
+    <state x="430" y="175" width="448" height="488" key="#com.intellij.tools.ToolEditorDialog" timestamp="1602686874932">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="430" y="175" width="448" height="488" key="#com.intellij.tools.ToolEditorDialog/0.0.1536.864@0.0.1536.864" timestamp="1602686874932" />
+    <state width="588" height="526" key="DebuggerActiveHint" timestamp="1602333852388">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="380" height="438" key="DebuggerActiveHint/0.0.1280.720@0.0.1280.720" timestamp="1601648998937" />
+    <state width="588" height="526" key="DebuggerActiveHint/0.0.1536.864@0.0.1536.864" timestamp="1602333852388" />
+    <state x="93" y="93" width="1350" height="678" key="DiffContextDialog" timestamp="1602307421509">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="93" y="93" width="1350" height="678" key="DiffContextDialog/0.0.1536.864@0.0.1536.864" timestamp="1602307421509" />
+    <state x="272" y="61" width="661" height="669" key="EditFileWatcherDialog" timestamp="1602731496365">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="227" y="51" width="661" height="669" key="EditFileWatcherDialog/0.0.1280.720@0.0.1280.720" timestamp="1602253016541" />
+    <state x="272" y="61" key="EditFileWatcherDialog/0.0.1536.864@0.0.1536.864" timestamp="1602731496365" />
+    <state x="500" y="181" key="FileChooserDialogImpl" timestamp="1602242941457">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="500" y="181" key="FileChooserDialogImpl/0.0.1280.720@0.0.1280.720" timestamp="1602242941457" />
+    <state x="649" y="331" width="586" height="202" key="Github.ShareDialog" timestamp="1602730688287">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="649" y="331" width="586" height="202" key="Github.ShareDialog/0.0.1536.864@0.0.1536.864" timestamp="1602730688287" />
+    <state width="1537" height="133" key="GridCell.Tab.0.bottom" timestamp="1602760929076">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1281" height="159" key="GridCell.Tab.0.bottom/0.0.1280.720@0.0.1280.720" timestamp="1602253380928" />
+    <state width="1537" height="133" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1602760929076" />
+    <state width="1537" height="133" key="GridCell.Tab.0.center" timestamp="1602760929076">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1281" height="159" key="GridCell.Tab.0.center/0.0.1280.720@0.0.1280.720" timestamp="1602253380928" />
+    <state width="1537" height="133" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1602760929076" />
+    <state width="1537" height="133" key="GridCell.Tab.0.left" timestamp="1602760929075">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1281" height="159" key="GridCell.Tab.0.left/0.0.1280.720@0.0.1280.720" timestamp="1602253380928" />
+    <state width="1537" height="133" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1602760929075" />
+    <state width="1537" height="133" key="GridCell.Tab.0.right" timestamp="1602760929076">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1281" height="159" key="GridCell.Tab.0.right/0.0.1280.720@0.0.1280.720" timestamp="1602253380928" />
+    <state width="1537" height="133" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1602760929076" />
+    <state width="1537" height="324" key="GridCell.Tab.1.bottom" timestamp="1602686175579">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1281" height="159" key="GridCell.Tab.1.bottom/0.0.1280.720@0.0.1280.720" timestamp="1602253380928" />
+    <state width="1537" height="324" key="GridCell.Tab.1.bottom/0.0.1536.864@0.0.1536.864" timestamp="1602686175579" />
+    <state width="1537" height="324" key="GridCell.Tab.1.center" timestamp="1602686175579">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1281" height="159" key="GridCell.Tab.1.center/0.0.1280.720@0.0.1280.720" timestamp="1602253380928" />
+    <state width="1537" height="324" key="GridCell.Tab.1.center/0.0.1536.864@0.0.1536.864" timestamp="1602686175579" />
+    <state width="1537" height="324" key="GridCell.Tab.1.left" timestamp="1602686175579">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1281" height="159" key="GridCell.Tab.1.left/0.0.1280.720@0.0.1280.720" timestamp="1602253380928" />
+    <state width="1537" height="324" key="GridCell.Tab.1.left/0.0.1536.864@0.0.1536.864" timestamp="1602686175579" />
+    <state width="1537" height="324" key="GridCell.Tab.1.right" timestamp="1602686175579">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1281" height="159" key="GridCell.Tab.1.right/0.0.1280.720@0.0.1280.720" timestamp="1602253380928" />
+    <state width="1537" height="324" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1602686175579" />
+    <state width="1537" height="324" key="GridCell.Tab.2.bottom" timestamp="1602686175579">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1281" height="159" key="GridCell.Tab.2.bottom/0.0.1280.720@0.0.1280.720" timestamp="1602253380928" />
+    <state width="1537" height="324" key="GridCell.Tab.2.bottom/0.0.1536.864@0.0.1536.864" timestamp="1602686175579" />
+    <state width="1537" height="324" key="GridCell.Tab.2.center" timestamp="1602686175579">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1281" height="159" key="GridCell.Tab.2.center/0.0.1280.720@0.0.1280.720" timestamp="1602253380928" />
+    <state width="1537" height="324" key="GridCell.Tab.2.center/0.0.1536.864@0.0.1536.864" timestamp="1602686175579" />
+    <state width="1537" height="324" key="GridCell.Tab.2.left" timestamp="1602686175579">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1281" height="159" key="GridCell.Tab.2.left/0.0.1280.720@0.0.1280.720" timestamp="1602253380928" />
+    <state width="1537" height="324" key="GridCell.Tab.2.left/0.0.1536.864@0.0.1536.864" timestamp="1602686175579" />
+    <state width="1537" height="324" key="GridCell.Tab.2.right" timestamp="1602686175579">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1281" height="159" key="GridCell.Tab.2.right/0.0.1280.720@0.0.1280.720" timestamp="1602253380928" />
+    <state width="1537" height="324" key="GridCell.Tab.2.right/0.0.1536.864@0.0.1536.864" timestamp="1602686175579" />
+    <state width="1537" height="133" key="GridCell.Tab.3.bottom" timestamp="1602685937067">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1281" height="159" key="GridCell.Tab.3.bottom/0.0.1280.720@0.0.1280.720" timestamp="1602253380929" />
+    <state width="1537" height="133" key="GridCell.Tab.3.bottom/0.0.1536.864@0.0.1536.864" timestamp="1602685937067" />
+    <state width="1537" height="133" key="GridCell.Tab.3.center" timestamp="1602685937067">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1281" height="159" key="GridCell.Tab.3.center/0.0.1280.720@0.0.1280.720" timestamp="1602253380928" />
+    <state width="1537" height="133" key="GridCell.Tab.3.center/0.0.1536.864@0.0.1536.864" timestamp="1602685937067" />
+    <state width="1537" height="133" key="GridCell.Tab.3.left" timestamp="1602685937067">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1281" height="159" key="GridCell.Tab.3.left/0.0.1280.720@0.0.1280.720" timestamp="1602253380928" />
+    <state width="1537" height="133" key="GridCell.Tab.3.left/0.0.1536.864@0.0.1536.864" timestamp="1602685937067" />
+    <state width="1537" height="133" key="GridCell.Tab.3.right" timestamp="1602685937067">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1281" height="159" key="GridCell.Tab.3.right/0.0.1280.720@0.0.1280.720" timestamp="1602253380929" />
+    <state width="1537" height="133" key="GridCell.Tab.3.right/0.0.1536.864@0.0.1536.864" timestamp="1602685937067" />
+    <state x="787" y="177" key="RollbackChangesDialog" timestamp="1602760201792">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="787" y="177" key="RollbackChangesDialog/0.0.1536.864@0.0.1536.864" timestamp="1602760201792" />
+    <state x="49" y="14" width="1034" height="708" key="SettingsEditor" timestamp="1602731497157">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="41" y="12" width="1034" height="708" key="SettingsEditor/0.0.1280.720@0.0.1280.720" timestamp="1602253017376" />
+    <state x="49" y="14" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1602731497157" />
+    <state x="280" y="113" key="Vcs.Push.Dialog.v2" timestamp="1602734134710">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="233" y="94" key="Vcs.Push.Dialog.v2/0.0.1280.720@0.0.1280.720" timestamp="1602242928066" />
+    <state x="280" y="113" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1602734134710" />
+    <state x="555" y="80" width="526" height="528" key="com.intellij.tools.ToolSelectDialog.dimensionServiceKey" timestamp="1602686889147">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="555" y="80" width="526" height="528" key="com.intellij.tools.ToolSelectDialog.dimensionServiceKey/0.0.1536.864@0.0.1536.864" timestamp="1602686889147" />
+    <state x="358" y="169" key="jetbrains.nodejs.interpreters-dialog" timestamp="1601964406881">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="358" y="169" key="jetbrains.nodejs.interpreters-dialog/0.0.1280.720@0.0.1280.720" timestamp="1601964406881" />
+    <state x="415" y="235" width="610" height="279" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1601370616225">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="415" y="235" width="610" height="279" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.0.1280.720@0.0.1280.720" timestamp="1601370616225" />
+    <state x="297" y="161" key="run.anything.popup" timestamp="1601350544233">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="297" y="161" key="run.anything.popup/0.0.1280.720@0.0.1280.720" timestamp="1601350544233" />
+    <state x="420" y="293" width="800" height="390" key="scopes" timestamp="1602731495527">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="350" y="244" key="scopes/0.0.1280.720@0.0.1280.720" timestamp="1602252967571" />
+    <state x="420" y="293" width="800" height="390" key="scopes/0.0.1536.864@0.0.1536.864" timestamp="1602731495527" />
+    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1602473171551">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1602473171551" />
+  </component>
+</project>

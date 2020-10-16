@@ -1,0 +1,26 @@
+{
+  "name": "chatty",
+  "version": "0.6.8",
+  "dependencies": {
+    "custom-electron-titlebar": "^3.2.4",
+    "electron-context-menu": "^2.3.0"
+  },
+  "description": "Secure and easy-to-use chatting app",
+  "main": "main.js",
+  "devDependencies": {
+    "electron": "^10.1.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ../../.",
+    "build": "electron-packager . --out=build-packages --platform=all --arch=all --icon=img/icon.ico --electron-version 10.1.3 --overwrite"
+  },
+  "keywords": [
+    "chatty",
+    "chat",
+    "app",
+    "encrypted"
+  ],
+  "author": "Vincent Kwok (cryptoAlgo Inc)",
+  "license": "GPL-3.0-or-later"
+}

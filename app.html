@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="img/icon.png"/>
+    <meta charset="UTF-8">
+    <meta name="description" content="Chatty Web: Use Chatty right in your browser!
+    Chatty is an end-to-end encrypted and easy-to-use chatting app">
+    <title>Chatty</title>
+    <!-- Responsive meta tag for mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Material Components Dependencies -->
+    <link href="css/material-components.css" rel="stylesheet">
+    <script type="text/javascript" src="js/material-components.js"></script>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="css/app.min.css">
+
+    <!-- Firebase scripts -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script type="text/javascript" src="js/firebase-app.min.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script type="text/javascript" src="js/firebase-database.min.js"></script>
+
+    <!-- Firebase Init -->
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyB2qfOxR3BzepLt8WUUFM_g3BwmwEb5Lfw",
+            authDomain: "chatty-inc.firebaseapp.com",
+            databaseURL: "https://chatty-inc.firebaseio.com",
+            projectId: "chatty-inc",
+            storageBucket: "chatty-inc.appspot.com",
+            messagingSenderId: "679793156903",
+            appId: "1:679793156903:web:2ca60c3db5faddda3c3f02",
+            measurementId: "G-KHT796RDEY"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    <!-- End Firebase Scripts -->
+
+    <!-- JSEncrypt RSA crypto and keygen -->
+    <script src="js/jsencrypt.js"></script>
+
+    <!-- Driver scripts -->
+    <script defer type="text/javascript" src="js/app.min.js"></script> <!-- Critical script -->
+    <script defer type="text/javascript" src="js/common.min.js"></script> <!-- For all pages -->
+    <script defer type="text/javascript" src="js/winButtons.min.js"></script> <!-- For all pages -->
+    <!-- CryptoJS -->
+    <script type="text/javascript" src="js/crypto-js.min.js"></script>
+    <!-- BCrypt Library -->
+    <script type="text/javascript" src="js/bcrypt.min.js"></script>
+    <!-- AES-JS Library -->
+    <script type="text/javascript" src="js/aes-js.js"></script>
+</head>
+<body class="mdc-typography" ondragstart="return false;">
+<!-- Login overlay -->
+<div class="login-overlay">
+    <div class="login-holder no-select">
+        <div id="login-box">
+            <h1 class="mdc-typography--headline2">Chatty Login</h1>
+            <p id="login-msg"></p>
+            <label class="mdc-text-field mdc-text-field--filled" id="emailField-signin" data-mdc-auto-init="MDCTextField">
+                <span class="mdc-text-field__ripple"></span>
+                <input class="mdc-text-field__input" type="password" aria-labelledby="email-label">
+                <span class="mdc-floating-label" id="email-label">Email</span>
+                <span class="mdc-line-ripple"></span>
+            </label> <br/><br/>
+            <label class="mdc-text-field mdc-text-field--filled" id="pwdField" data-mdc-auto-init="MDCTextField">
+                <span class="mdc-text-field__ripple"></span>
+                <input class="mdc-text-field__input" type="password" id="password-input" aria-labelledby="my-label-id">
+                <span class="mdc-floating-label" id="my-label-id">Password</span>
+                <span class="mdc-line-ripple"></span>
+                <button onclick="toggleVisibility(document.getElementById('password-input'), this)">
+                    <span class="mdc-fab__icon material-icons">visibility</span>
+                </button>
+            </label>
+            <button class="mdc-button mdc-button--raised" onclick="c_login()">
+                <div class="mdc-button__ripple"></div>
+                <span class="mdc-button__label">Login</span>
+            </button>
+        </div>
+        <div id="create_pwd">
+            <h1 class="mdc-typography--headline2">Create a Chatty account</h1>
+            <p>
+                Remember this password - you will need it to login each time you use Chatty.<br/>
+                This password cannot be reset if forgotten.
+            </p>
+            <label class="mdc-text-field mdc-text-field--filled" id="newPwdField" data-mdc-auto-init="MDCTextField">
+                <span class="mdc-text-field__ripple"></span>
+                <input class="mdc-text-field__input" type="password" minlength="8" id="new-pwd-in" aria-labelledby="c_pwd_label">
+                <span class="mdc-floating-label" id="c_pwd_label">New password</span>
+                <span class="mdc-line-ripple"></span>
+                <button onclick="toggleVisibility(document.getElementById('new-pwd-in'), this)">
+                    <span class="mdc-fab__icon material-icons">visibility</span>
+                </button>
+            </label>
+            <button class="mdc-button mdc-button--raised" onclick="c_acct()">
+                <div class="mdc-button__ripple"></div>
+                <span class="mdc-button__label">Create account</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Join group dialog -->
+<div class="mdc-dialog no-select">
+    <div class="mdc-dialog__container">
+        <div class="mdc-dialog__surface"
+             role="alertdialog"
+             aria-modal="true"
+             aria-labelledby="my-dialog-title"
+             aria-describedby="my-dialog-content">
+            <!-- Title cannot contain leading whitespace due to mdc-typography-baseline-top() -->
+            <h2 class="mdc-dialog__title" id="add-grp-title">
+                Create/Join Group
+            </h2>
+            <div class="mdc-dialog__content" id="add-grp-content">
+                <div id="dialog-opts">
+                    <button class="mdc-button--raised mdc-button"
+                            onclick="document.getElementById('dialog-opts').style.display='none';document.getElementById('join-group').classList.remove('hidden')"
+                            style="margin-bottom:5px;width:100%" data-mdc-auto-init="MDCRipple">
+                        <div class="mdc-button__ripple"></div>
+                        <span class="mdc-button__label">Join Group</span>
+                        <div class="mdc-button__touch"></div>
+                    </button>
+                    <hr class="hero-feature-divider"/>
+                    <button class="mdc-button--raised mdc-button"
+                            onclick="document.getElementById('dialog-opts').style.display='none';document.getElementById('create-group').classList.remove('hidden')"
+                            style="margin-top:5px;width:100%" data-mdc-auto-init="MDCRipple">
+                        <div class="mdc-button__ripple"></div>
+                        <span class="mdc-button__label">Create Group</span>
+                        <div class="mdc-button__touch"></div>
+                    </button>
+                </div>
+                <div id="create-group" class="hidden">
+                    <label class="mdc-text-field mdc-text-field--filled" id="create-grp-name" data-mdc-auto-init="MDCTextField">
+                        <span class="mdc-text-field__ripple"></span>
+                        <input class="mdc-text-field__input" type="text"
+                               aria-labelledby="create-grp-name-label">
+                        <span class="mdc-floating-label" id="create-grp-name-label">Group Name</span>
+                        <span class="mdc-line-ripple"></span>
+                    </label>
+                    <br/>
+                    <label class="mdc-text-field mdc-text-field--filled" id="create-grp-desc" data-mdc-auto-init="MDCTextField"
+                    style="margin-top:5px">
+                        <span class="mdc-text-field__ripple"></span>
+                        <input class="mdc-text-field__input" type="text"
+                               aria-labelledby="create-grp-desc-label">
+                        <span class="mdc-floating-label" id="create-grp-desc-label">Description</span>
+                        <span class="mdc-line-ripple"></span>
+                    </label>
+                </div>
+                <div id="join-group" class="hidden">
+                    <label class="mdc-text-field mdc-text-field--filled" id="join-grp-code" data-mdc-auto-init="MDCTextField">
+                        <span class="mdc-text-field__ripple"></span>
+                        <input class="mdc-text-field__input" minlength="6" maxlength="6"
+                               aria-labelledby="join-grp-code-label">
+                        <span class="mdc-floating-label" id="join-grp-code-label">Group Code</span>
+                        <span class="mdc-line-ripple"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="mdc-dialog__actions">
+                <button type="button" class="mdc-button mdc-dialog__button" data-mdc-dialog-action="close">
+                    <div class="mdc-button__ripple"></div>
+                    <span class="mdc-button__label">Cancel</span>
+                </button>
+                <button type="button" class="mdc-button mdc-dialog__button" data-mdc-dialog-action="accept" onclick="addNewGrp()">
+                    <div class="mdc-button__ripple"></div>
+                    <span class="mdc-button__label">OK</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="mdc-dialog__scrim"></div>
+</div>
+
+<!-- Get group join code dialog -->
+<div class="mdc-dialog" id="get-grp-code">
+    <div class="mdc-dialog__container">
+        <div class="mdc-dialog__surface"
+             role="alertdialog"
+             aria-modal="true"
+             aria-labelledby="my-dialog-title"
+             aria-describedby="my-dialog-content">
+            <!-- Title cannot contain leading whitespace due to mdc-typography-baseline-top() -->
+            <h2 class="mdc-dialog__title">
+                Group Code
+            </h2>
+            <div class="mdc-dialog__content">
+                <p>
+                    Get an invite code that allows users to request to join your group.<br>
+                    The user can only join if the request is accepted.<br>
+                    Each code can only be used once.
+                </p>
+                <h2 class="mdc-typography--headline2 grpInviteCode">
+                    CODE
+                </h2>
+            </div>
+            <div class="mdc-dialog__actions">
+                <button type="button" class="mdc-button mdc-dialog__button" data-mdc-dialog-action="close">
+                    <div class="mdc-button__ripple"></div>
+                    <span class="mdc-button__label">Close</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="mdc-dialog__scrim"></div>
+</div>
+
+<!-- Drawer -->
+<aside class="mdc-drawer mdc-drawer--modal no-select" id="drawer" data-mdc-auto-init="MDCDrawer">
+    <div class="mdc-drawer__header">
+        <h3 class="mdc-drawer__title"><a class="a-no-style" href="index.html">Chatty</a></h3>
+        <h6 class="mdc-drawer__subtitle">Select Group</h6>
+    </div>
+    <div class="mdc-drawer__content">
+        <hr class="hero-feature-divider" style="margin-top: 10px"/>
+        <a class="mdc-list-item" onclick="openJoinGrpDialog()" tabindex="0">
+            <span class="mdc-list-item__ripple"></span>
+            <i class="material-icons mdc-list-item__graphic" aria-hidden="true">add</i>
+            <span class="mdc-list-item__text">Add/join Group</span>
+        </a>
+        <hr class="hero-feature-divider" />
+        <nav class="mdc-list">
+
+        </nav>
+    </div>
+</aside>
+
+<!-- Drawer scrim -->
+<div class="mdc-drawer-scrim"></div>
+
+<!-- Top app bar -->
+<header class="mdc-top-app-bar mdc-top-app-bar--fixed mdc-top-app-bar--dense" data-mdc-auto-init="MDCTopAppBar">
+    <div class="mdc-top-app-bar__row">
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+            <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button" style="display:none"
+                    onclick="new window.mdc.drawer.MDCDrawer(document.getElementById('drawer')).open = true"
+                    aria-label="Open navigation menu">menu</button>
+            <span class="mdc-top-app-bar__title" id="grp-name">Chatty</span>
+        </section>
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
+            <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button mdc-menu-surface--anchor"
+                    aria-label="Menu" onclick="new mdc.menu.MDCMenu(document.querySelector('#top-bar-menu')).open=true">
+                more_vert
+                <div class="mdc-menu mdc-menu-surface" id="top-bar-menu">
+                    <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical" tabindex="-1">
+                        <li class="mdc-list-item" role="menuitem" onclick="toggleTheme()">
+                            <span class="mdc-list-item__ripple"></span>
+                            <span class="mdc-list-item__text">Toggle theme</span>
+                        </li>
+                        <li class="mdc-list-item" role="menuitem"
+                            onclick="getGrpInviteCode()">
+                            <span class="mdc-list-item__ripple"></span>
+                            <span class="mdc-list-item__text">Get invite code</span>
+                        </li>
+                    </ul>
+                </div>
+            </button>
+            <div id="window-buttons" style="display:none">
+                <div class="window-act-button" id="min-button" style="grid-column:1">
+                    <i class="material-icons">remove</i>
+                </div>
+                <div class="window-act-button" id="max-button" style="grid-column:2;display:none">
+                    <i class="material-icons">fullscreen</i>
+                </div>
+                <div class="window-act-button" id="restore-button" style="grid-column:2">
+                    <i class="material-icons">fullscreen_exit</i>
+                </div>
+                <div class="window-act-button" id="close-button" style="grid-column:3">
+                    <i class="material-icons">close</i>
+                </div>
+            </div>
+        </section>
+    </div>
+</header>
+
+<!-- Progress bar -->
+<div role="progressbar" class="mdc-linear-progress mdc-linear-progress--indeterminate overlay-progressbar">
+    <div class="mdc-linear-progress__buffering-dots"></div>
+    <div class="mdc-linear-progress__buffer"></div>
+    <div class="mdc-linear-progress__bar mdc-linear-progress__primary-bar">
+        <span class="mdc-linear-progress__bar-inner"></span>
+    </div>
+    <div class="mdc-linear-progress__bar mdc-linear-progress__secondary-bar">
+        <span class="mdc-linear-progress__bar-inner"></span>
+    </div>
+</div>
+
+<!-- Messages container -->
+<div class="mdc-top-app-bar--dense-fixed-adjust messages-area-holder">
+    <div class="messages-area">
+        <div class="add-first-grp no-select" style="display:none">
+            <h2 class="mdc-typography--headline2">
+                Add your first group by clicking on the menu button at the top left!
+            </h2>
+            <div class="mdc-layout-grid">
+                <div class="mdc-layout-grid__inner">
+                    <div class="mdc-layout-grid__cell mdc-elevation--z8">
+                        <h2>1. Click on the menu button</h2>
+                        <h2 class="material-icons">menu</h2>
+                    </div>
+                    <div class="mdc-layout-grid__cell mdc-elevation--z8">
+                        <h2>2. Click on Add/Join Group</h2>
+                        <h2 class="material-icons">add</h2>
+                    </div>
+                    <div class="mdc-layout-grid__cell mdc-elevation--z8">
+                        <h2>3. Get an invite code to join a group or create your own!</h2>
+                        <h2 class="material-icons">group_add</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="message-box no-select">
+    <label class="mdc-text-field mdc-text-field--filled" id="message-textbox">
+        <span class="mdc-text-field__ripple"></span>
+        <textarea class="mdc-text-field__input" style="resize:none"
+                  tabindex="0" type="text" aria-labelledby="msg-textbox-label"></textarea>
+        <span class="mdc-floating-label" id="msg-textbox-label">Type a message</span>
+        <span class="mdc-line-ripple"></span>
+    </label>
+    <button class="mdc-fab" aria-label="Send message" data-mdc-auto-init="MDCRipple" onclick="sendMsg()">
+        <div class="mdc-fab__ripple"></div>
+        <span class="mdc-fab__icon material-icons">send</span>
+    </button>
+</div>
+
+<!-- MDC Snackbar -->
+<div class="mdc-snackbar">
+    <div class="mdc-snackbar__surface">
+        <div class="mdc-snackbar__label"
+             role="status"
+             aria-live="polite"
+             id="snackbar-text">
+        </div>
+    </div>
+</div>
+
+<div id="popup-YT">
+    <div id="popup-drag">
+        <button class="material-icons close-btn">close</button>
+    </div>
+    <div class="iframe-holder">
+        <iframe frameborder="0" class="inlineYTPlayer" sandbox="allow-scripts allow-same-origin" allowfullscreen="allowfullscreen">
+            Could not load YouTube video.
+        </iframe> <!-- JavaScript dynamically loads src -->
+    </div>
+</div>
+
+<script type="text/javascript">window.mdc.autoInit();</script>
+</body>
+</html>

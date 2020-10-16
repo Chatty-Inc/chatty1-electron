@@ -1,0 +1,77 @@
+<component name="libraryTable">
+  <library name="Generated files" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/js/app.min.js" />
+        <item url="file://$PROJECT_DIR$/js/bcrypt.min.js" />
+        <item url="file://$PROJECT_DIR$/js/common.min.js" />
+        <item url="file://$PROJECT_DIR$/js/crypto-js.min.js" />
+        <item url="file://$PROJECT_DIR$/js/firebase-app.min.js" />
+        <item url="file://$PROJECT_DIR$/js/firebase-database.min.js" />
+        <item url="file://$PROJECT_DIR$/js/main.min.js" />
+        <item url="file://$PROJECT_DIR$/js/secure-random.min.js" />
+        <item url="file://$PROJECT_DIR$/js/sha1.min.js" />
+        <item url="file://$PROJECT_DIR$/js/ua-parser.min.js" />
+        <item url="file://$PROJECT_DIR$/js/winButtons.min.js" />
+        <item url="file://$PROJECT_DIR$/main.min.js" />
+        <item url="file://$PROJECT_DIR$/packages/win64/chatty-win32-x64/resources/app/js/aes-js.min.js" />
+        <item url="file://$PROJECT_DIR$/packages/win64/chatty-win32-x64/resources/app/js/app.min.js" />
+        <item url="file://$PROJECT_DIR$/packages/win64/chatty-win32-x64/resources/app/js/common.min.js" />
+        <item url="file://$PROJECT_DIR$/packages/win64/chatty-win32-x64/resources/app/js/firebase-app.min.js" />
+        <item url="file://$PROJECT_DIR$/packages/win64/chatty-win32-x64/resources/app/js/firebase-app.min.min.js" />
+        <item url="file://$PROJECT_DIR$/packages/win64/chatty-win32-x64/resources/app/js/firebase-database.min.js" />
+        <item url="file://$PROJECT_DIR$/packages/win64/chatty-win32-x64/resources/app/js/jsencrypt.min.js" />
+        <item url="file://$PROJECT_DIR$/packages/win64/chatty-win32-x64/resources/app/js/main.min.js" />
+        <item url="file://$PROJECT_DIR$/packages/win64/chatty-win32-x64/resources/app/js/material-components.min.js" />
+        <item url="file://$PROJECT_DIR$/packages/win64/chatty-win32-x64/resources/app/js/secure-random.min.js" />
+        <item url="file://$PROJECT_DIR$/packages/win64/chatty-win32-x64/resources/app/js/setup-events.min.js" />
+        <item url="file://$PROJECT_DIR$/packages/win64/chatty-win32-x64/resources/app/main.min.js" />
+        <item url="file://$PROJECT_DIR$/packages/win64/chatty-win32-x64/resources/app/node_modules/electron-squirrel-startup/index.min.js" />
+        <item url="file://$PROJECT_DIR$/packages/win64/chatty-win32-x64/resources/app/node_modules/electron-squirrel-startup/node_modules/debug/node.min.js" />
+        <item url="file://$PROJECT_DIR$/packages/win64/chatty-win32-x64/resources/app/node_modules/electron-squirrel-startup/node_modules/debug/src/browser.min.js" />
+        <item url="file://$PROJECT_DIR$/packages/win64/chatty-win32-x64/resources/app/node_modules/electron-squirrel-startup/node_modules/debug/src/debug.min.js" />
+        <item url="file://$PROJECT_DIR$/packages/win64/chatty-win32-x64/resources/app/node_modules/electron-squirrel-startup/node_modules/debug/src/index.min.js" />
+        <item url="file://$PROJECT_DIR$/packages/win64/chatty-win32-x64/resources/app/node_modules/electron-squirrel-startup/node_modules/debug/src/inspector-log.min.js" />
+        <item url="file://$PROJECT_DIR$/packages/win64/chatty-win32-x64/resources/app/node_modules/electron-squirrel-startup/node_modules/debug/src/node.min.js" />
+        <item url="file://$PROJECT_DIR$/packages/win64/chatty-win32-x64/resources/app/node_modules/electron-squirrel-startup/node_modules/ms/index.min.js" />
+        <item url="file://$PROJECT_DIR$/packages/win64/chatty-win32-x64/resources/app/node_modules/electron-squirrel-startup/test/index.test.min.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/js/app.min.js" />
+      <root url="file://$PROJECT_DIR$/js/bcrypt.min.js" />
+      <root url="file://$PROJECT_DIR$/js/common.min.js" />
+      <root url="file://$PROJECT_DIR$/js/crypto-js.min.js" />
+      <root url="file://$PROJECT_DIR$/js/firebase-app.min.js" />
+      <root url="file://$PROJECT_DIR$/js/firebase-database.min.js" />
+      <root url="file://$PROJECT_DIR$/js/main.min.js" />
+      <root url="file://$PROJECT_DIR$/js/secure-random.min.js" />
+      <root url="file://$PROJECT_DIR$/js/sha1.min.js" />
+      <root url="file://$PROJECT_DIR$/js/ua-parser.min.js" />
+      <root url="file://$PROJECT_DIR$/js/winButtons.min.js" />
+      <root url="file://$PROJECT_DIR$/main.min.js" />
+      <root url="file://$PROJECT_DIR$/packages/win64/chatty-win32-x64/resources/app/js/aes-js.min.js" />
+      <root url="file://$PROJECT_DIR$/packages/win64/chatty-win32-x64/resources/app/js/app.min.js" />
+      <root url="file://$PROJECT_DIR$/packages/win64/chatty-win32-x64/resources/app/js/common.min.js" />
+      <root url="file://$PROJECT_DIR$/packages/win64/chatty-win32-x64/resources/app/js/firebase-app.min.js" />
+      <root url="file://$PROJECT_DIR$/packages/win64/chatty-win32-x64/resources/app/js/firebase-app.min.min.js" />
+      <root url="file://$PROJECT_DIR$/packages/win64/chatty-win32-x64/resources/app/js/firebase-database.min.js" />
+      <root url="file://$PROJECT_DIR$/packages/win64/chatty-win32-x64/resources/app/js/jsencrypt.min.js" />
+      <root url="file://$PROJECT_DIR$/packages/win64/chatty-win32-x64/resources/app/js/main.min.js" />
+      <root url="file://$PROJECT_DIR$/packages/win64/chatty-win32-x64/resources/app/js/material-components.min.js" />
+      <root url="file://$PROJECT_DIR$/packages/win64/chatty-win32-x64/resources/app/js/secure-random.min.js" />
+      <root url="file://$PROJECT_DIR$/packages/win64/chatty-win32-x64/resources/app/js/setup-events.min.js" />
+      <root url="file://$PROJECT_DIR$/packages/win64/chatty-win32-x64/resources/app/main.min.js" />
+      <root url="file://$PROJECT_DIR$/packages/win64/chatty-win32-x64/resources/app/node_modules/electron-squirrel-startup/index.min.js" />
+      <root url="file://$PROJECT_DIR$/packages/win64/chatty-win32-x64/resources/app/node_modules/electron-squirrel-startup/node_modules/debug/node.min.js" />
+      <root url="file://$PROJECT_DIR$/packages/win64/chatty-win32-x64/resources/app/node_modules/electron-squirrel-startup/node_modules/debug/src/browser.min.js" />
+      <root url="file://$PROJECT_DIR$/packages/win64/chatty-win32-x64/resources/app/node_modules/electron-squirrel-startup/node_modules/debug/src/debug.min.js" />
+      <root url="file://$PROJECT_DIR$/packages/win64/chatty-win32-x64/resources/app/node_modules/electron-squirrel-startup/node_modules/debug/src/index.min.js" />
+      <root url="file://$PROJECT_DIR$/packages/win64/chatty-win32-x64/resources/app/node_modules/electron-squirrel-startup/node_modules/debug/src/inspector-log.min.js" />
+      <root url="file://$PROJECT_DIR$/packages/win64/chatty-win32-x64/resources/app/node_modules/electron-squirrel-startup/node_modules/debug/src/node.min.js" />
+      <root url="file://$PROJECT_DIR$/packages/win64/chatty-win32-x64/resources/app/node_modules/electron-squirrel-startup/node_modules/ms/index.min.js" />
+      <root url="file://$PROJECT_DIR$/packages/win64/chatty-win32-x64/resources/app/node_modules/electron-squirrel-startup/test/index.test.min.js" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>
